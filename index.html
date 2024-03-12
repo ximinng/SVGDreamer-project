@@ -72,9 +72,10 @@
     <!-- author organization -->
     <div class="text-center">
         <p class="fs-6">
-            <sup>1</sup>Beihang University
-            &nbsp;&nbsp;<sup>2</sup>The University of Hong Kong</p>
-        &nbsp;&nbsp;<sup>*</sup>Corresponding author</p>
+            <sup>1</sup>Beihang University &nbsp;&nbsp;
+            <sup>2</sup>The University of Hong Kong
+            <br/>
+            <sup>*</sup>Corresponding author
         </p>
     </div>
 
@@ -109,12 +110,12 @@
             </div>
             <div class="col col-lg-3">
                 <a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"
-                   href="https://github.com/ximinng/PyTorch-SVGRender">
+                   href="https://ximinng.github.io/PyTorch-SVGRender-project/">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                          class="bi bi-github" viewBox="0 0 16 16">
                         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
                     </svg>
-                    <h3>SVG Package</h3>
+                    <h3>Pytorch-SVGRender</h3>
                 </a>
             </div>
             <!--            <div class="col col-lg-2">-->
@@ -146,11 +147,23 @@
     <!-- teaser -->
     <div class="text-center">
         <figure class="figure">
-            <img src="assets/teaser1.png" class="img-thumbnail figure-img img-fluid rounded" alt="teaser" height="90%">
-            <figcaption class="figure-caption">Given a text prompt, SVGDreamer can generate a variety of vector
-                graphics. SVGDreamer is a versatile tool that can work with various vector styles without being limited
-                to a specific prompt suffix. We utilize various colored suffixes to indicate different styles. The style
-                is governed by vector primitives.
+            <img src="assets/teaser1.png" class="img-thumbnail figure-img img-fluid rounded"
+                 width="80%" height="auto"
+                 alt="SVGDreamer teaser">
+            <figcaption class="figure-caption">
+                Given a text prompt, SVGDreamer can generate a <b>variety</b> of vector graphics.
+                <br/>
+                (Various colored suffixes indicate different styles.)
+            </figcaption>
+        </figure>
+
+        <figure class="figure">
+            <img src="assets/svg_elements.png" class="img-thumbnail figure-img img-fluid rounded"
+                 width="80%" height="auto"
+                 alt="SVGDreamer teaser">
+            <figcaption class="figure-caption">
+                Our proposed tool, SVGDreamer, excels at generating editable vector graphics. As such, it can be used to
+                create vector graphic assets.
             </figcaption>
         </figure>
     </div>
@@ -164,7 +177,8 @@
         <div class="card-body">
             <h2 class="card-title text-center card-title-margin">Abstract</h2>
             <p class="card-text">
-                Recently, <b>text-guided scalable vector graphics (SVGs)</b> synthesis has shown promise in domains such
+                Recently, <b>text-guided scalable vector graphics (text-to-SVGs)</b> synthesis has shown promise in
+                domains such
                 as iconography and sketch.
                 However, existing text-to-SVG generation methods lack editability and struggle with visual quality and
                 result diversity.
@@ -174,10 +188,12 @@
                 Specifically, the SIVE process introduce attention-based primitive control and an attention-mask loss
                 function for effective control and manipulation of individual elements.
                 Additionally, we propose a <b>Vectorized Particle-based Score Distillation (VPSD)</b> approach to tackle
-                the challenges of color over-saturation, vector primitives over-smoothing, and limited result diversity
-                in existing text-to-SVG generation methods.
-                Furthermore, on the basis of VPSD, we introduce Reward Feedback Learning (ReFL) to accelerate VPSD
-                convergence and improve aesthetic appeal.
+                the
+                challenges of shape over-smoothing, color over-saturation, limited diversity in results, and slow
+                convergence in existing text-to-SVG generation methods.
+                VPSD models SVGs as distributions of control points and colors to counteract over-smoothing and
+                over-saturation. Furthermore, VPSD leverages a reward model to reweight vector particles, which improves
+                aesthetic appeal and accelerates convergence.
                 Extensive experiments have been conducted to validate the effectiveness of SVGDreamer, demonstrating its
                 superiority over baseline methods in terms of editability, visual quality, and diversity.
             </p>
@@ -301,7 +317,9 @@
             </p>
             <div class="text-center">
                 <figure class="figure">
-                    <img src="assets/method.png" class="figure-img img-fluid rounded" alt="method">
+                    <img src="assets/method.png" class="figure-img img-fluid rounded"
+                         alt="SVGDreamer method"
+                         width="80%" height="auto">
                     <figcaption class="figure-caption">Overview of our proposed SVGDreamer. The method consists of two
                         parts: semantic-driven image vectorization (SIVE) and SVG synthesis through VPSD optimization.
                         The result obtained from SIVE can be used as input for VPSD, which helps in establishing a
@@ -310,112 +328,67 @@
                 </figure>
             </div>
 
-            <p class="card-text">
-                Unfortunately, SDS-based methods often suffer from issues such as color over-saturation, vector graphic
-                over-smoothing, and limited diversity in synthesis results.
-                Inspired by the principled variational score distillation framework, we propose vectorized
-                particle-based score distillation (VPSD) to address the aforementioned issues.
-                Instead of modeling vector graphics as a set of control points and corresponding colors like SDS, we
-                model vector graphics as the distribution of control points and colors respectively. In principle, given
-                a text prompt $y$, there exists a probabilistic distribution $\mu$ of all possible vector shapes
-                representations.
-            </p>
-            <div class="text-center">
-                <figure class="figure">
-                    <img src="assets/method_vpsd.png" class="figure-img img-fluid rounded" alt="method" width="65%">
-                    <figcaption class="figure-caption">An illustration of the Vectorized Particle-based Score
-                        Distillation (VPSD).
-                    </figcaption>
-                </figure>
-            </div>
+            <!--            <p class="card-text">-->
+            <!--                Unfortunately, SDS-based methods often suffer from issues such as color over-saturation, vector graphic-->
+            <!--                over-smoothing, and limited diversity in synthesis results.-->
+            <!--                Inspired by the principled variational score distillation framework, we propose vectorized-->
+            <!--                particle-based score distillation (VPSD) to address the aforementioned issues.-->
+            <!--                Instead of modeling vector graphics as a set of control points and corresponding colors like SDS, we-->
+            <!--                model vector graphics as the distribution of control points and colors respectively. In principle, given-->
+            <!--                a text prompt $y$, there exists a probabilistic distribution $\mu$ of all possible vector shapes-->
+            <!--                representations.-->
+            <!--            </p>-->
+            <!--            <div class="text-center">-->
+            <!--                <figure class="figure">-->
+            <!--                    <img src="assets/method_vpsd.png" class="figure-img img-fluid rounded" alt="method" width="65%">-->
+            <!--                    <figcaption class="figure-caption">An illustration of the Vectorized Particle-based Score-->
+            <!--                        Distillation (VPSD).-->
+            <!--                    </figcaption>-->
+            <!--                </figure>-->
+            <!--            </div>-->
         </div>
     </div>
     <br>
 
     <!-- Experiments -->
-    <div class="card">
-        <div class="card-body">
-            <h2 class="card-title card-title-margin">Experiments</h2>
-            <hr class="body-hr"/>
-            <!--            <p class="card-text">-->
-            <!--                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo-->
-            <!--                dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero,-->
-            <!--                elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate-->
-            <!--                dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue-->
-            <!--                felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla-->
-            <!--                vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl,-->
-            <!--                porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras-->
-            <!--                volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam.-->
-            <!--                Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.-->
-            <!--            </p>-->
-            <!--            <br>-->
-
-            <!--            &lt;!&ndash; Table example &ndash;&gt;-->
-            <!--            <table class="table">-->
-            <!--                <thead>-->
-            <!--                <tr class="table-primary">-->
-            <!--                    <th scope="col">#</th>-->
-            <!--                    <th scope="col">First</th>-->
-            <!--                    <th scope="col">Last</th>-->
-            <!--                    <th scope="col">Handle</th>-->
-            <!--                </tr>-->
-            <!--                </thead>-->
-            <!--                <tbody class="table-group-divider">-->
-            <!--                <tr>-->
-            <!--                    <th scope="row">1</th>-->
-            <!--                    <td>Mark</td>-->
-            <!--                    <td>Otto</td>-->
-            <!--                    <td>@mdo</td>-->
-            <!--                </tr>-->
-            <!--                <tr>-->
-            <!--                    <th scope="row">2</th>-->
-            <!--                    <td>Jacob</td>-->
-            <!--                    <td>Thornton</td>-->
-            <!--                    <td>@fat</td>-->
-            <!--                </tr>-->
-            <!--                <tr>-->
-            <!--                    <th scope="row">3</th>-->
-            <!--                    <td colspan="2">Larry the Bird</td>-->
-            <!--                    <td>@twitter</td>-->
-            <!--                </tr>-->
-            <!--                </tbody>-->
-            <!--            </table>-->
-
-            <!--            <br>-->
-
-            <div class="text-center">
-                <figure class="figure">
-                    <img src="./assets/qualitative.png" class="img-thumbnail figure-img img-fluid rounded"
-                         alt="qualitative">
-                    <figcaption class="figure-caption">Results of qualitative evaluation.</figcaption>
-                </figure>
-            </div>
-
-        </div>
-    </div>
-    <br>
+    <!--    <div class="card">-->
+    <!--        <div class="card-body">-->
+    <!--            <h2 class="card-title card-title-margin">Experiments</h2>-->
+    <!--            <hr class="body-hr"/>-->
+    <!--            <div class="text-center">-->
+    <!--                <figure class="figure">-->
+    <!--                    <img src="./assets/qualitative.png" class="img-thumbnail figure-img img-fluid rounded"-->
+    <!--                         alt="qualitative">-->
+    <!--                    <figcaption class="figure-caption">Results of qualitative evaluation.</figcaption>-->
+    <!--                </figure>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <br>-->
 
     <!-- Applications -->
     <div class="card">
         <div class="card-body">
             <h2 class="card-title card-title-margin">Application -- Vector Element Asset</h2>
             <hr class="body-hr"/>
+            <!--            <p class="card-text">-->
+            <!--                Our proposed tool, SVGDreamer, is capable of generating vector graphics with exceptional editability.-->
+            <!--                Therefore, it can be utilized to create vector graphic assets for poster and logo design.-->
+            <!--                As shown in below, all graphic elements in the two poster examples are generated by our SVGDreamer.-->
+            <!--            </p>-->
+            <!--            <br>-->
+            <!--            <div class="text-center">-->
+            <!--                <figure class="figure">-->
+            <!--                    <img src="./assets/svg_elements.png" class="img-thumbnail figure-img img-fluid rounded"-->
+            <!--                         alt="experiments">-->
+            <!--                    <figcaption class="figure-caption">Application examples of our SVGDreamer.</figcaption>-->
+            <!--                </figure>-->
+            <!--            </div>-->
             <p class="card-text">
                 Our proposed tool, SVGDreamer, is capable of generating vector graphics with exceptional editability.
-                Therefore, it can be utilized to create vector graphic assets for poster and logo design.
-                As shown in below, all graphic elements in the two poster examples are generated by our SVGDreamer.
-            </p>
-            <br>
-            <div class="text-center">
-                <figure class="figure">
-                    <img src="./assets/svg_elements.png" class="img-thumbnail figure-img img-fluid rounded"
-                         alt="experiments">
-                    <figcaption class="figure-caption">Application examples of our SVGDreamer.</figcaption>
-                </figure>
-            </div>
-            <p class="card-text">
-                Additionally, we present further examples below. These generated SVGs can be decomposed into background
-                and foreground elements, which can then be recombined to create new SVGs.
+                Additionally, we present further examples below.
+                These generated SVGs can be decomposed into background and foreground elements, which can then be
+                recombined to create new SVGs.
             </p>
             <div class="text-center">
                 <figure class="figure">
@@ -435,6 +408,8 @@
             <h2 class="card-title card-title-margin">Application -- Poster Design</h2>
             <hr class="body-hr"/>
             <p class="card-text">
+                SVGDreamer can be utilized to create vector graphic assets for poster design.
+                As shown in below, all graphic elements in the three poster examples are generated by our SVGDreamer.
                 Designers can easily recombine these elements with glyph to create unique posters (in SVG format).
             </p>
             <div class="text-center">
@@ -452,20 +427,21 @@
     <!-- Results -->
     <div class="card">
         <div class="card-body">
-            <h2 class="card-title card-title-margin">More VPSD Results</h2>
+            <h2 class="card-title card-title-margin">Additional Results</h2>
             <hr class="body-hr"/>
-            <p class="card-text">
-                Additional qualitative results of SVGDreamer.
-            </p>
+            <p class="card-text"></p>
             <div class="text-center">
                 <figure class="figure">
                     <img src="./assets/teaser2.png" class="img-thumbnail figure-img img-fluid rounded"
                          alt="experiments">
+                    <figcaption class="figure-caption">
+                        Additional qualitative results of SVGDreamer.
+                    </figcaption>
                 </figure>
-                <figure class="figure">
-                    <img src="./assets/teaser3.png" class="img-thumbnail figure-img img-fluid rounded"
-                         alt="experiments">
-                </figure>
+                <!--                <figure class="figure">-->
+                <!--                    <img src="./assets/teaser3.png" class="img-thumbnail figure-img img-fluid rounded"-->
+                <!--                         alt="experiments">-->
+                <!--                </figure>-->
             </div>
         </div>
     </div>
