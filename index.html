@@ -30,8 +30,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SVGDreamer: Text Guided SVG Generation with Diffusion Model</title>
+    <!-- The description that appears when you share the link -->
     <meta property="og:description" content="SVGDreamer: Text Guided SVG Generation with Diffusion Model"/>
+    <!-- Used to display page descriptions in search results -->
     <meta name="description" content="SVGDreamer, SVG generation, text-to-svg, text2svg">
+    <!-- favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/x-icon">
 </head>
 
 <body>
@@ -39,7 +43,7 @@
     <hr>
     <!-- Paper Title -->
     <div class="container text-center">
-        <span class="blog-header-logo project_name_1">SVGDreamer:</span>
+        <span class="blog-header-logo colorful-text">SVGDreamer:</span>
         <a href="https://arxiv.org/abs/2312.16476" class="blog-header-logo text-body-emphasis">
             Text Guided SVG Generation with Diffusion Model
         </a>
@@ -148,7 +152,7 @@
     <div class="text-center">
         <figure class="figure">
             <img src="assets/teaser1.png" class="img-thumbnail figure-img img-fluid rounded"
-                 width="80%" height="auto"
+                 width="90%" height="auto"
                  alt="SVGDreamer teaser">
             <figcaption class="figure-caption">
                 Given a text prompt, SVGDreamer can generate a <b>variety</b> of vector graphics.
@@ -159,7 +163,7 @@
 
         <figure class="figure">
             <img src="assets/svg_elements.png" class="img-thumbnail figure-img img-fluid rounded"
-                 width="80%" height="auto"
+                 width="90%" height="auto"
                  alt="SVGDreamer teaser">
             <figcaption class="figure-caption">
                 Our proposed tool, SVGDreamer, excels at generating editable vector graphics. As such, it can be used to
@@ -201,32 +205,71 @@
     </div>
     <br>
 
-    <!-- Online Demo -->
-    <!--    <div class="card">-->
-    <!--        <div class="card-body">-->
-    <!--            <h2 class="card-title card-title-margin">Online Demo</h2>-->
-    <!--            <hr class="body-hr"/>-->
-    <!--            <p class="card-text">-->
-    <!--                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo-->
-    <!--                dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero,-->
-    <!--                elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate-->
-    <!--                dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue-->
-    <!--                felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla-->
-    <!--                vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl,-->
-    <!--                porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras-->
-    <!--                volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam.-->
-    <!--                Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.-->
-    <!--            </p>-->
-    <!--            <div class="text-center">-->
-    <!--                <figure class="figure">-->
-    <!--                    <img src="./assets/online_demo.png" class="img-thumbnail figure-img img-fluid rounded"-->
-    <!--                         alt="online demo">-->
-    <!--                    <figcaption class="figure-caption">A caption for the above image.</figcaption>-->
-    <!--                </figure>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--    <br>-->
+    <!-- Video 1 -->
+<!--    <div class="card">-->
+<!--        <div class="card-body">-->
+<!--            <h2 class="card-title card-title-margin">Visualizing Text-to-SVG Generation</h2>-->
+<!--            <hr class="body-hr"/>-->
+<!--            <p class="card-text">-->
+<!--                SVGDreamer generates various styles of SVG based on text prompts. <br/>-->
+<!--                It supports the use of six vector primitives, including-->
+<!--                <b class="colorful-text">Iconography, Sketch, Pixel Art, Low-Poly, Painting, and Ink and Wash.</b>-->
+<!--            </p>-->
+
+<!--            <div class="text-center">-->
+<!--                &lt;!&ndash; Card 1 &ndash;&gt;-->
+<!--                <div class="card">-->
+<!--                    <div class="card-body">-->
+<!--                        <br/>-->
+<!--                        <div class="row justify-content-md-center align-items-center">-->
+<!--                            <div class="col">-->
+<!--                                <figure class="figure">-->
+<!--                                    <img src="assets/svgdreamer/Sydney.png"-->
+<!--                                         class="img-fluid rounded mx-auto d-block">-->
+<!--                                </figure>-->
+<!--                                <figure class="figure">-->
+<!--                                    <img src="assets/svgdreamer/Sydney.gif"-->
+<!--                                         class="img-fluid rounded mx-auto d-block">-->
+<!--                                </figure>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row justify-content-md-center align-items-center">-->
+<!--                            <h5 class="card-title"></h5>-->
+<!--                            <p class="card-text">-->
+<!--                                Prompt: "Sydney opera house. oil painting. by Van Gogh"-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div> &lt;!&ndash; End Card 1 &ndash;&gt;-->
+
+<!--                &lt;!&ndash; Card 2 &ndash;&gt;-->
+<!--                <div class="card">-->
+<!--                    <div class="card-body">-->
+<!--                        <br/>-->
+<!--                        <div class="row justify-content-md-center align-items-center">-->
+<!--                            <div class="col">-->
+<!--                                <figure class="figure">-->
+<!--                                    <img src="assets/svgdreamer/phoenix.png"-->
+<!--                                         class="img-fluid rounded mx-auto d-block">-->
+<!--                                </figure>-->
+<!--                                <figure class="figure">-->
+<!--                                    <img src="assets/svgdreamer/phoenix.gif"-->
+<!--                                         class="img-fluid rounded mx-auto d-block">-->
+<!--                                </figure>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row justify-content-md-center align-items-center">-->
+<!--                            <p class="card-text">-->
+<!--                                Prompt: "a phoenix coming out of the fire drawing. lineal color. trending on-->
+<!--                                artstation."-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div> &lt;!&ndash; End Card 2 &ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <br>-->
 
     <!-- Video 1 -- video in modal -->
     <!--    <div class="card">-->
