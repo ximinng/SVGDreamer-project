@@ -24,8 +24,13 @@
           rel="stylesheet"
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
           crossorigin="anonymous">
+    <!--Local Icon-->
+    <link rel="stylesheet" href="icons/style.css">
+    <!--Local Fonts-->
+    <link rel="stylesheet" href="fonts/avenir-next/stylesheet.css">
+    <link rel="stylesheet" href="fonts/segoe-print/stylesheet.css">
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,106 +48,59 @@
     <hr>
     <!-- Paper Title -->
     <div class="container text-center">
-        <span class="blog-header-logo colorful-text">SVGDreamer:</span>
-        <a href="https://arxiv.org/abs/2312.16476" class="blog-header-logo text-body-emphasis">
-            Text Guided SVG Generation with Diffusion Model
-        </a>
+        <span class="title-font x-gradient-font">SVGDreamer: Text Guided SVG Generation with Diffusion Model</span>
     </div>
     <hr>
     <!-- author list -->
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <p class="fs-5"><a href="https://ximinng.github.io/"
-                                   class="link-body-emphasis">Ximing Xing</a><sup>1</sup></p>
+    <div class="container author text-center">
+        <!-- authors -->
+        <div class="row gy-2">
+            <div class="col-12 col-md-2">
+                <a class="link" href="https://ximinng.github.io">Ximing Xing</a><sup>1</sup>
             </div>
-            <div class="col"><p class="fs-5">Haitao Zhou<sup>1</sup></p></div>
-            <div class="col"><p class="fs-5">Chuang Wang<sup>1</sup></p></div>
+            <div class="col-12 col-md-2">Haitao Zhou<sup>1</sup></div>
+            <div class="col-12 col-md-2">Chuang Wang<sup>1</sup></div>
+            <div class="col-12 col-md-2">
+                <a class="link" href="https://hellojing89.github.io">Jing Zhang</a><sup>1</sup>
+            </div>
+            <div class="col-12 col-md-2">
+                <a class="link" href="https://www.cs.hku.hk/people/academic-staff/dongxu">Dong Xu</a><sup>2</sup>
+            </div>
+            <div class="col-12 col-md-2">
+                <a class="link" href="https://yuqian1023.github.io">Qian Yu</a><sup>1</sup>
+            </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <p class="fs-5"><a href="https://hellojing89.github.io/"
-                                   class="link-body-emphasis">Jing Zhang</a><sup>1</sup></p>
-            </div>
-            <div class="col"><p class="fs-5">
-                <a href="https://www.cs.hku.hk/index.php/people/academic-staff/dongxu" class="link-body-emphasis">Dong
-                    Xu</a><sup>2</sup></p></div>
-            <div class="col">
-                <p class="fs-5"><a href="https://yuqian1023.github.io/" class="link-body-emphasis">Qian
-                    Yu</a><sup>1</sup><sup>*</sup></p>
+        <!-- author organization -->
+        <div class="row mt-3">
+            <div class="col-12">
+                <sup>1</sup>Beihang University &nbsp;&nbsp;<sup>2</sup>The University of Hong Kong
             </div>
         </div>
     </div>
-    <!-- author organization -->
-    <div class="text-center">
-        <p class="fs-6">
-            <sup>1</sup>Beihang University &nbsp;&nbsp;
-            <sup>2</sup>The University of Hong Kong
-            <br/>
-            <sup>*</sup>Corresponding author
-        </p>
-    </div>
-
     <!-- paper status -->
-    <div class="text-center">
-        <h3>Paper status - Accepted by CVPR 2024 🎉🎉🎉</h3>
+    <div class="text-center" style="margin-top: 20px; font-size: 30px; font-weight: 500;">
+        Paper status - Accepted by CVPR 2024 🎉🎉🎉
     </div>
     <!-- links -->
     <div class="text-center">
         <div class="row justify-content-md-center">
-            <div class="col col-lg-2">
-                <!-- more svg icon can bre found in:  https://icons.getbootstrap.com/?q=github -->
-                <a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"
-                   href="https://arxiv.org/abs/2312.16476">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
-                         class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
-                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
-                        <path d="M4.603 14.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.697 19.697 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.712 5.712 0 0 1-.911-.95 11.651 11.651 0 0 0-1.997.406 11.307 11.307 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.266.266 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.71 12.71 0 0 1 1.01-.193 11.744 11.744 0 0 1-.51-.858 20.801 20.801 0 0 1-.5 1.05zm2.446.45c.15.163.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.876 3.876 0 0 0-.612-.053zM8.078 7.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"/>
-                    </svg>
-                    <h3>Paper</h3>
-                </a>
+            <div id="links">
+                <div class="col col-lg-2">
+                    <a id="arxiv" href="https://arxiv.org/abs/2312.16476">Paper</a>
+                </div>
+                <div class="col col-lg-2">
+                    <a id="paper" href="https://huggingface.co/blog/xingxm/svgdreamer">Blog</a>
+                </div>
+                <div class="col col-lg-2">
+                    <a id="code" href="https://github.com/ximinng/SVGDreamer">Code</a>
+                </div>
+                <div class="col col-lg-2">
+                    <a id="demo" href="https://huggingface.co/SVGRender">Space</a>
+                </div>
+                <div class="col col-lg-2">
+                    <a id="code" href="https://github.com/QianYu-Lab/PyTorch-SVGRender">Render</a>
+                </div>
             </div>
-            <div class="col col-lg-2">
-                <a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"
-                   href="https://github.com/ximinng/SVGDreamer">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                         class="bi bi-github" viewBox="0 0 16 16">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                    </svg>
-                    <h3>Code</h3>
-                </a>
-            </div>
-            <div class="col col-lg-2">
-                <a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"
-                   href="https://huggingface.co/blog/xingxm/svgdreamer">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-post" viewBox="0 0 16 16">
-                        <path d="M4 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5z"/>
-                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1"/>
-                    </svg>
-                    <h3>Blog</h3>
-                </a>
-            </div>
-            <div class="col col-lg-3">
-                <a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"
-                   href="https://github.com/QianYu-Lab/PyTorch-SVGRender">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                         class="bi bi-github" viewBox="0 0 16 16">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                    </svg>
-                    <h3>Pytorch-SVGRender</h3>
-                </a>
-            </div>
-            <!--            <div class="col col-lg-2">-->
-            <!--                <a class="icon-link icon-link-hover" style="&#45;&#45;bs-icon-link-transform: translate3d(0, -.125rem, 0);"-->
-            <!--                   href="#">-->
-            <!--                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"-->
-            <!--                         class="bi bi-file-earmark-ppt" viewBox="0 0 16 16">-->
-            <!--                        <path d="M7 5.5a1 1 0 0 0-1 1V13a.5.5 0 0 0 1 0v-2h1.188a2.75 2.75 0 0 0 0-5.5H7zM8.188 10H7V6.5h1.188a1.75 1.75 0 1 1 0 3.5z"/>-->
-            <!--                        <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>-->
-            <!--                    </svg>-->
-            <!--                    <h3>Slides</h3>-->
-            <!--                </a>-->
-            <!--            </div>-->
         </div>
     </div>
     <br>
@@ -150,18 +108,17 @@
     <!-- teaser -->
     <div class="text-center">
         <figure class="figure">
-            <img src="assets/teaser1.png" class="img-thumbnail figure-img img-fluid rounded"
+            <img src="assets/teaser1.png" class="figure-img img-fluid rounded"
                  width="90%" height="auto"
                  alt="SVGDreamer teaser">
             <figcaption class="figure-caption">
                 Given a text prompt, SVGDreamer can generate a <b>variety</b> of vector graphics.
-                <br/>
                 (Various colored suffixes indicate different styles.)
             </figcaption>
         </figure>
 
         <figure class="figure">
-            <img src="assets/svg_elements.png" class="img-thumbnail figure-img img-fluid rounded"
+            <img src="assets/svg_elements.png" class="figure-img img-fluid rounded"
                  width="90%" height="auto"
                  alt="SVGDreamer teaser">
             <figcaption class="figure-caption">
@@ -171,13 +128,21 @@
         </figure>
     </div>
 
+    <!-- TL;DR -->
+    <div class="text-center" style="margin-top: 20px; font-size: 20px; font-weight: 500;">
+        <b>TL;DR:</b>
+        SVGDreamer is a text-to-SVG synthesis method that improves editability, visual quality, and diversity. It uses
+        <b>Semantic-driven Image Vectorization (SIVE)</b> for element control and <b>Vectorized Particle-based Score
+        Distillation
+        (VPSD)</b> to address shape, color, and convergence challenges.
+    </div>
 </header>
 <br>
 
 <main class="container">
     <!-- Abstract -->
-    <div class="card">
-        <div class="card-body">
+    <div class="card border-0">
+        <div class="card-body x-gradient-block">
             <h2 class="card-title text-center card-title-margin">Abstract</h2>
             <p class="card-text">
                 Recently, <b>text-guided scalable vector graphics (text-to-SVGs)</b> synthesis has shown promise in
@@ -205,70 +170,70 @@
     <br>
 
     <!-- Video 1 -->
-<!--    <div class="card">-->
-<!--        <div class="card-body">-->
-<!--            <h2 class="card-title card-title-margin">Visualizing Text-to-SVG Generation</h2>-->
-<!--            <hr class="body-hr"/>-->
-<!--            <p class="card-text">-->
-<!--                SVGDreamer generates various styles of SVG based on text prompts. <br/>-->
-<!--                It supports the use of six vector primitives, including-->
-<!--                <b class="colorful-text">Iconography, Sketch, Pixel Art, Low-Poly, Painting, and Ink and Wash.</b>-->
-<!--            </p>-->
+    <!--    <div class="card">-->
+    <!--        <div class="card-body">-->
+    <!--            <h2 class="card-title card-title-margin">Visualizing Text-to-SVG Generation</h2>-->
+    <!--            <hr class="body-hr"/>-->
+    <!--            <p class="card-text">-->
+    <!--                SVGDreamer generates various styles of SVG based on text prompts. <br/>-->
+    <!--                It supports the use of six vector primitives, including-->
+    <!--                <b class="colorful-text">Iconography, Sketch, Pixel Art, Low-Poly, Painting, and Ink and Wash.</b>-->
+    <!--            </p>-->
 
-<!--            <div class="text-center">-->
-<!--                &lt;!&ndash; Card 1 &ndash;&gt;-->
-<!--                <div class="card">-->
-<!--                    <div class="card-body">-->
-<!--                        <br/>-->
-<!--                        <div class="row justify-content-md-center align-items-center">-->
-<!--                            <div class="col">-->
-<!--                                <figure class="figure">-->
-<!--                                    <img src="assets/svgdreamer/Sydney.png"-->
-<!--                                         class="img-fluid rounded mx-auto d-block">-->
-<!--                                </figure>-->
-<!--                                <figure class="figure">-->
-<!--                                    <img src="assets/svgdreamer/Sydney.gif"-->
-<!--                                         class="img-fluid rounded mx-auto d-block">-->
-<!--                                </figure>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="row justify-content-md-center align-items-center">-->
-<!--                            <h5 class="card-title"></h5>-->
-<!--                            <p class="card-text">-->
-<!--                                Prompt: "Sydney opera house. oil painting. by Van Gogh"-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div> &lt;!&ndash; End Card 1 &ndash;&gt;-->
+    <!--            <div class="text-center">-->
+    <!--                &lt;!&ndash; Card 1 &ndash;&gt;-->
+    <!--                <div class="card">-->
+    <!--                    <div class="card-body">-->
+    <!--                        <br/>-->
+    <!--                        <div class="row justify-content-md-center align-items-center">-->
+    <!--                            <div class="col">-->
+    <!--                                <figure class="figure">-->
+    <!--                                    <img src="assets/svgdreamer/Sydney.png"-->
+    <!--                                         class="img-fluid rounded mx-auto d-block">-->
+    <!--                                </figure>-->
+    <!--                                <figure class="figure">-->
+    <!--                                    <img src="assets/svgdreamer/Sydney.gif"-->
+    <!--                                         class="img-fluid rounded mx-auto d-block">-->
+    <!--                                </figure>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="row justify-content-md-center align-items-center">-->
+    <!--                            <h5 class="card-title"></h5>-->
+    <!--                            <p class="card-text">-->
+    <!--                                Prompt: "Sydney opera house. oil painting. by Van Gogh"-->
+    <!--                            </p>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div> &lt;!&ndash; End Card 1 &ndash;&gt;-->
 
-<!--                &lt;!&ndash; Card 2 &ndash;&gt;-->
-<!--                <div class="card">-->
-<!--                    <div class="card-body">-->
-<!--                        <br/>-->
-<!--                        <div class="row justify-content-md-center align-items-center">-->
-<!--                            <div class="col">-->
-<!--                                <figure class="figure">-->
-<!--                                    <img src="assets/svgdreamer/phoenix.png"-->
-<!--                                         class="img-fluid rounded mx-auto d-block">-->
-<!--                                </figure>-->
-<!--                                <figure class="figure">-->
-<!--                                    <img src="assets/svgdreamer/phoenix.gif"-->
-<!--                                         class="img-fluid rounded mx-auto d-block">-->
-<!--                                </figure>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="row justify-content-md-center align-items-center">-->
-<!--                            <p class="card-text">-->
-<!--                                Prompt: "a phoenix coming out of the fire drawing. lineal color. trending on-->
-<!--                                artstation."-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div> &lt;!&ndash; End Card 2 &ndash;&gt;-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <br>-->
+    <!--                &lt;!&ndash; Card 2 &ndash;&gt;-->
+    <!--                <div class="card">-->
+    <!--                    <div class="card-body">-->
+    <!--                        <br/>-->
+    <!--                        <div class="row justify-content-md-center align-items-center">-->
+    <!--                            <div class="col">-->
+    <!--                                <figure class="figure">-->
+    <!--                                    <img src="assets/svgdreamer/phoenix.png"-->
+    <!--                                         class="img-fluid rounded mx-auto d-block">-->
+    <!--                                </figure>-->
+    <!--                                <figure class="figure">-->
+    <!--                                    <img src="assets/svgdreamer/phoenix.gif"-->
+    <!--                                         class="img-fluid rounded mx-auto d-block">-->
+    <!--                                </figure>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="row justify-content-md-center align-items-center">-->
+    <!--                            <p class="card-text">-->
+    <!--                                Prompt: "a phoenix coming out of the fire drawing. lineal color. trending on-->
+    <!--                                artstation."-->
+    <!--                            </p>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div> &lt;!&ndash; End Card 2 &ndash;&gt;-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <br>-->
 
     <!-- Video 1 -- video in modal -->
     <!--    <div class="card">-->
@@ -349,7 +314,7 @@
     <!--    <br>-->
 
     <!-- Methodology -->
-    <div class="card">
+    <div class="card border-0">
         <div class="card-body">
             <h2 class="card-title card-title-margin">Methodology</h2>
             <hr class="body-hr"/>
@@ -392,26 +357,10 @@
     </div>
     <br>
 
-    <!-- Experiments -->
-    <!--    <div class="card">-->
-    <!--        <div class="card-body">-->
-    <!--            <h2 class="card-title card-title-margin">Experiments</h2>-->
-    <!--            <hr class="body-hr"/>-->
-    <!--            <div class="text-center">-->
-    <!--                <figure class="figure">-->
-    <!--                    <img src="./assets/qualitative.png" class="img-thumbnail figure-img img-fluid rounded"-->
-    <!--                         alt="qualitative">-->
-    <!--                    <figcaption class="figure-caption">Results of qualitative evaluation.</figcaption>-->
-    <!--                </figure>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--    <br>-->
-
     <!-- Applications -->
-    <div class="card">
+    <div class="card border-0">
         <div class="card-body">
-            <h2 class="card-title card-title-margin">Application -- Vector Element Asset</h2>
+            <h2 class="card-title card-title-margin">Application | Vector Element Asset</h2>
             <hr class="body-hr"/>
             <!--            <p class="card-text">-->
             <!--                Our proposed tool, SVGDreamer, is capable of generating vector graphics with exceptional editability.-->
@@ -434,7 +383,7 @@
             </p>
             <div class="text-center">
                 <figure class="figure">
-                    <img src="./assets/editable.png" class="img-thumbnail figure-img img-fluid rounded"
+                    <img src="./assets/editable.png" class="figure-img img-fluid rounded"
                          alt="experiments">
                     <figcaption class="figure-caption">Examples showcasing the editability of the results generated by
                         our SVGDreamer.
@@ -445,7 +394,7 @@
     </div>
 
     <br>
-    <div class="card">
+    <div class="card border-0">
         <div class="card-body">
             <h2 class="card-title card-title-margin">Application -- Poster Design</h2>
             <hr class="body-hr"/>
@@ -456,7 +405,8 @@
             </p>
             <div class="text-center">
                 <figure class="figure">
-                    <img src="./assets/poster.png" class="img-thumbnail figure-img img-fluid rounded" alt="experiments">
+                    <img src="./assets/poster.png" class="figure-img img-fluid rounded"
+                         alt="experiments">
                     <figcaption class="figure-caption">Comparison of synthetic posters generated by different methods.
                         The input text prompts and glyphs to be added to the posters are displayed on the left side.
                     </figcaption>
@@ -467,14 +417,14 @@
     <br>
 
     <!-- Results -->
-    <div class="card">
+    <div class="card border-0">
         <div class="card-body">
             <h2 class="card-title card-title-margin">Additional Results</h2>
             <hr class="body-hr"/>
             <p class="card-text"></p>
             <div class="text-center">
                 <figure class="figure">
-                    <img src="./assets/teaser2.png" class="img-thumbnail figure-img img-fluid rounded"
+                    <img src="./assets/teaser2.png" class="figure-img img-fluid rounded"
                          alt="experiments">
                     <figcaption class="figure-caption">
                         Additional qualitative results of SVGDreamer.
@@ -499,17 +449,20 @@
     <!--    <br>-->
 
     <!-- Citation -->
-    <div class="card">
+    <div class="card border-0">
         <div class="card-body">
             <h2 class="card-title card-title-margin">Citation</h2>
             <p id="bibtex" class="card-text" style="border: #1a1c20 1px">
-                <code> @article{xing2023svgdreamer,<br>
+                <code> @article{svgdreamer_xing_2023,<br>
                     &nbsp;&nbsp;title={SVGDreamer: Text Guided SVG Generation with Diffusion Model},<br>
-                    &nbsp;&nbsp;author={Xing, Ximing and Zhou, Haitao and Wang, Chuang and Zhang, Jing and Xu, Dong and
-                    Yu, Qian},<br>
-                    &nbsp;&nbsp;journal={arXiv preprint arXiv:2312.16476},<br>
-                    &nbsp;&nbsp;year={2023}<br>
-                    }
+                    &nbsp;&nbsp;author = {Xing, Ximing and Zhou, Haitao and Wang, Chuang and Zhang, Jing and Xu,
+                    Dong
+                    and Yu, Qian},<br>
+                    &nbsp;&nbsp;booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+                    Recognition (CVPR)},<br>
+                    &nbsp;&nbsp;month = {June},<br>
+                    &nbsp;&nbsp;year = {2024},<br>
+                    &nbsp;&nbsp;pages = {4546-4555}}
                 </code>
             </p>
 
@@ -540,7 +493,7 @@
     <br>
 
     <!-- Acknowledgements -->
-    <div class="card">
+    <div class="card border-0">
         <div class="card-body">
             <h4 class="card-title card-title-margin">Acknowledgements</h4>
             <p class="card-text">We thank Ximing Xing for providing us with the source code of the web page to help us
@@ -551,19 +504,21 @@
 
 </main>
 
-<footer class="container blog-footer">
-    <p>
-        This webpage template was originally made by
-        <a href="https://github.com/ximinng"
-           class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Ximing Xing</a>.
-    </p>
+<footer class="footer">
     <div class="container">
-        <div class="badge bg-primary text-wrap">
-            <p>
-                <a href="#" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
-                    Back to top
-                </a>
-            </p>
+        <div class="row align-items-center">
+            <!-- left layout -->
+            <div class="col-12 col-md-6 text-md-start text-center">
+                <p class="footer-title mb-0">SVGDreamer: Text Guided SVG Generation with Diffusion Model</p>
+            </div>
+            <!-- right layout -->
+            <div class="col-12 col-md-6 text-md-end text-center">
+                <p class="footer-text mb-0">
+                    This webpage template was originally made by
+                    <a href="https://github.com/ximinng/GithubPages-Template" class="link-primary text-decoration-none">Ximing
+                        Xing</a>.
+                </p>
+            </div>
         </div>
     </div>
 </footer>
